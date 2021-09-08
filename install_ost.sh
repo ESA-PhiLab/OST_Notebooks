@@ -4,7 +4,7 @@
 apt-get -y install python3-pip git libgdal-dev python3-gdal libspatialindex-dev wget libgfortran3 imagemagick file
 
 # set Snap and OTB version and download link
-OTB_VERSION="7.2.0"
+OTB_VERSION="7.3.0"
 TBX_VERSION="7"
 TBX_SUBVERSION="0"
 SNAP_URL="http://step.esa.int/downloads/${TBX_VERSION}.${TBX_SUBVERSION}/installers"
