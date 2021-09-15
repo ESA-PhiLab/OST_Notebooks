@@ -16,7 +16,7 @@ chmod 755 ${TBX}
 wget https://raw.githubusercontent.com/ESA-PhiLab/OpenSarToolkit/master/snap8.varfile
 
 # install snap
-./${TBX} -q -varfile snap7.varfile
+./${TBX} -q -varfile snap8.varfile
 rm ${TBX}
 
 # update snap
