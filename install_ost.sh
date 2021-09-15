@@ -19,12 +19,6 @@ wget https://raw.githubusercontent.com/ESA-PhiLab/OpenSarToolkit/master/snap8.va
 ./${TBX} -q -varfile snap8.varfile
 rm ${TBX}
 
-# update snap
-/home/ost/programs/snap/bin/snap --nosplash --nogui --modules --update-all 2>&1 | while read -r line; do \
-  echo "$line" && \
-  [ "$line" = "updates=0" ] && sleep 2 && pkill -TERM -f "snap/jre/bin/java"; \
-done; exit 0
-
 # OTB installation
 OTB=OTB-${OTB_VERSION}-Linux64.run
 wget https://www.orfeo-toolbox.org/packages/${OTB}
@@ -34,3 +28,11 @@ rm -f ${OTB}
 
 # install ost
 pip install git+https://github.com/ESA-PhiLab/OpenSarToolkit
+
+# update snap
+/home/ost/programs/snap/bin/snap --nosplash --nogui --modules --update-all 2>&1 | while read -r line; do \
+  echo "$line" && \
+  [ "$line" = "updates=0" ] && sleep 2 && pkill -TERM -f "snap/jre/bin/java"; \
+done; exit 0
+
+
