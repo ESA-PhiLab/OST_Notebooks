@@ -13,7 +13,7 @@ TBX="esa-snap_sentinel_unix_${TBX_VERSION}_${TBX_SUBVERSION}.sh"
 # get Snap
 wget "${SNAP_URL}/${TBX}"
 chmod 755 ${TBX}
-wget https://raw.githubusercontent.com/ESA-PhiLab/OpenSarToolkit/master/snap7.varfile
+wget https://raw.githubusercontent.com/ESA-PhiLab/OpenSarToolkit/master/snap8.varfile
 
 # install snap
 ./${TBX} -q -varfile snap7.varfile
