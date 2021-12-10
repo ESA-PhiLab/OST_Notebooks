@@ -27,7 +27,7 @@ chmod +x $OTB
 rm -f ${OTB}
 
 # install ost
-pip install git+https://github.com/ESA-PhiLab/OpenSarToolkit.git@develop
+pip install git+https://github.com/ESA-PhiLab/OpenSarToolkit.git@main
 
 # update snap
 /home/ost/programs/snap/bin/snap --nosplash --nogui --modules --update-all 2>&1 | while read -r line; do \
