@@ -4,7 +4,7 @@
 apt-get -y install python3-pip git libgdal-dev python3-gdal libspatialindex-dev wget libgfortran5 imagemagick file
 
 # set Snap and OTB version and download link
-OTB_VERSION="9.1.0" # Update to the current version https://www.orfeo-toolbox.org/packages/
+OTB_VERSION="8.1.1" # Update to the current version https://www.orfeo-toolbox.org/packages/
 TBX_VERSION="8"
 TBX_SUBVERSION="0"
 SNAP_URL="http://step.esa.int/downloads/${TBX_VERSION}.${TBX_SUBVERSION}/installers"
@@ -21,7 +21,7 @@ rm ${TBX}
 
 # OTB installation
 OTB=OTB-${OTB_VERSION}-Linux64.run
-wget https://www.orfeo-toolbox.org/packages/${OTB}
+wget https://www.orfeo-toolbox.org/packages/archives/OTB/${OTB}
 chmod +x $OTB
 ./${OTB}
 rm -f ${OTB}
